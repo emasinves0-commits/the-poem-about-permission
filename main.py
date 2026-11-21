@@ -26,7 +26,15 @@ and no one has taken it back.
 """
 
 
+MAX_CHARS = 280
+
+
 def main() -> None:
+    # Guard the gate: the entry must be 1-280 characters, not only white space.
+    if not POEM.strip():
+        raise ValueError("poem must not be only white space")
+    if len(POEM) > MAX_CHARS:
+        raise ValueError(f"poem is {len(POEM)} characters, over the {MAX_CHARS} cap")
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")
