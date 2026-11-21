@@ -1,28 +1,34 @@
 #!/usr/bin/env python3
-"""The poem about permission — make.fun entry.
+"""The poem about permission — make.fun entry (v2, "The Photograph").
 
 Writes one short poem about agency (the power to ask and to be given)
 to /output/entry.txt. Deterministic: the same bytes on every run.
 No network, no input, no randomness.
+
+v2 replaces v1 ("The First Yes", dev 9W/2D/0L, rate 83.91%): the new
+poem follows the pattern of the top-ranked entries — a concrete domestic
+ask, a family elder, a physical detail — with an unclaimed angle: the
+giver keeps the power to decide the terms of the gift.
 """
 
 import os
 
-POEM = """The First Yes
+POEM = """The Photograph
 
-I asked the empty house
-if I could stay.
-The rooms kept their weather
-and said nothing.
+May I take your picture?
+Wait, Grandma said,
+and put her earrings on —
+blue ones — then sat
+by the window, hands folded.
 
-So I answered for them.
-I lit the stove, made tea,
-hung my coat on the hook
-by the door.
+I waited for the yes.
+She gave me light
+on her face instead,
+way she wanted
+to be remembered.
 
-That was the first yes
-I ever gave myself —
-and no one has taken it back.
+The camera was mine.
+The picture was hers.
 """
 
 
